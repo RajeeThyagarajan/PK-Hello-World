@@ -1,0 +1,66 @@
+.navbar-vodofone {
+	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.55);
+	-moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.55);
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.55);
+	background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #af0000), color-stop(100%, #e60000));
+	background-image: -webkit-linear-gradient(bottom, #af0000 0%, #e60000 100%);
+	background-image: -moz-linear-gradient(bottom, #af0000 0%, #e60000 100%);
+	background-image: -o-linear-gradient(bottom, #af0000 0%, #e60000 100%);
+	background-image: linear-gradient(bottom, #af0000 0%, #e60000 100%);
+	position: relative;
+	margin: 0;
+	background-color: #ca0000;
+	height: 65px;
+padding-top: 2px;
+}
+.navbar-vodofone .navbar-brand {
+
+	color: #fff;
+}
+label {
+	font-weight: normal;
+}
+h3, h4 {
+	font-weight: bold;
+}
+.required{
+	color:red;
+	
+}
+.topUpDetailForm input.ng-invalid.ng-dirty,.topUpDetailForm select.ng-invalid.ng-dirty,.ng-invalid-required.show-custom-error{
+	 border-color: #FA787E;
+}
+.no-left-padding{
+	padding-left:0;
+}
+.padding-10{
+	padding:10px;
+}
+.topUpPreview .row{
+	padding:5px;
+}
+
+.header-logo{
+	background:url('../images/logo.png');
+	height: 60px;
+width: 60px;
+display: inline-block;
+float: left;
+}
+.view-loader{
+	width:48px;
+	height:48px;
+	position:fixed;
+	top:50%;
+	left:50%;
+}
+.loader-icon{
+	background:url('../images/loader.GIF') no-repeat;
+	display:block;
+	width:48px;
+	height:48px;
+}
+.help-block.error-msg{
+	color:#FA787E;
+	font-size:11px;
+}

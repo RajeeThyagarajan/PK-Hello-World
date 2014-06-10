@@ -1,0 +1,91 @@
+<div class="col-sm-10 col-sm-offset-1 topUpPreview">
+
+	
+	
+		<h4>Confirm your top up details </h4>
+		<hr>
+	<div ng-if="topUpDetail.mobileNumber!=undefined">
+	<div class="row">
+
+		<div class="col-sm-4 text-right">
+			Mobile number:
+		</div>
+		<div class="col-sm-4">
+			{{topUpDetail.mobileNumber}}
+		</div>
+	</div>
+
+	<div class="row">
+
+		<div class="col-sm-4 text-right">
+			I want to top up by:
+		</div>
+		<div class="col-sm-4">
+			{{topUpDetail.amount.Description}}
+		</div>
+	</div>
+
+	<div class="row">
+
+		<div class="col-sm-4 text-right">
+			Payment type:
+		</div>
+		<div class="col-sm-4">
+			{{topUpDetail.card.Name}}
+		</div>
+	</div>
+	<div class="row">
+
+		<div class="col-sm-4 text-right">
+			Name on card:
+		</div>
+		<div class="col-sm-4">
+			{{topUpDetail.cardFirstName}}
+		</div>
+	</div>
+	<div class="row">
+
+		<div class="col-sm-4 text-right">
+			Card number (ending in):
+		</div>
+		<div class="col-sm-4">
+			{{maskCreditCard(topUpDetail.cardNumber)}}
+		</div>
+	</div>
+	<div class="row">
+
+		<div class="col-sm-4 text-right">
+			Expiry date:
+		</div>
+		<div class="col-sm-4">
+			{{topUpDetail.cardExpiryMonth}}/{{topUpDetail.cardExpiryYear}}
+		</div>
+	</div>
+
+	<div class="row">
+
+		<div class="col-sm-4 col-sm-offset-4">
+			<div class="checkbox">
+				<label>
+					<input type="checkbox" name ="terms-conditions" id="terms-conditions" ng-model="$parent.termsConditions">
+					I accept the <a href="http://www.vodafone.ie/terms/prepay/index.jsp" target="_blank">terms and conditions</a> </label>
+			</div>
+			<p class="text-warning">
+				(Please do not refresh the page or press F5.)
+			</p>
+		</div>
+	</div>
+
+	<div class="row">
+
+		<div class="col-sm-4 col-sm-offset-4">
+			<button type="button" class="btn btn-primary" ng-click="topUpSubmit()">
+				Topup
+			</button>
+		</div>
+	</div>
+	</div>
+	<p class="text-danger text-center" ng-if="topUpDetail.mobileNumber==undefined">
+		Sorry,the requested service is not available!
+	</p>
+</div>

@@ -1,0 +1,16 @@
+<div class="col-sm-6 col-sm-offset-3">
+	
+	<p class="bg-success padding-10" ng-if="topUpSubmitResponse.ResponseCode==0">
+		Your Top up was successfull.The mobile number {{topUpDetail.mobileNumber}} is now topped up by {{topUpDetail.amount.Description}} with credit card {{maskCreditCard(topUpDetail.cardNumber)}} and order number {{topUpSubmitResponse.OrderID}}.
+		<a href="#/">Top Up another number</a>
+	</p>
+	<p class="bg-danger padding-10" ng-if="topUpSubmitResponse.ResponseCode && topUpSubmitResponse.ResponseCode!=0">
+		Your Top up failed.
+		<a href="#/">Try again</a>
+	</p>
+	<p class="text-danger" ng-if="topUpSubmitResponse==undefined">
+		Sorry,the requested service is not available!
+		<a href="#/">Go Home</a>
+	</p>
+	
+</div>

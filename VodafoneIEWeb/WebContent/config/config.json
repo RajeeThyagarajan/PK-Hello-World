@@ -1,0 +1,23 @@
+{
+	"app": {
+		"version": "0.0.1",
+		"mode": "staging",
+		"staging": {
+			"webServiceUrl": "http://localhost:8080/VIERest/"
+		},
+		"production": {},
+		"extras": {}
+	},
+	"requests": {
+		"getCountryList": "WebListCountryWebService/listCountry",
+		"getTopUpAmounts": "WebQueryPricePointsWebService/listPricePoint",
+		"getPaymentDeviceType":"WebListChargePaymentDeviceService/listPaymentDevice",
+		"getCountryRegion":"WebListCountryRegionWebService/listCountryRegion/",
+		"getMdnQuery":"WebMDNQueryWebService/querymdn/",
+		"topUpService":"WebProcessChargeOrderAnonymousWebService/ProcessChargeOrderAnonymous"
+		
+	}
+}
+
+
+

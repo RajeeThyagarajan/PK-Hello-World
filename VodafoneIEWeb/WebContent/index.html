@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<!-- define angular app -->
+<html xmlns:ng="http://angularjs.org" id="ng-app">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<!--[if lte IE 7]>
+		<script src="scripts/vendor/json2.js"></script>
+		<![endif]-->
+		<!--[if lte IE 8]>
+		<script>
+		document.createElement('ng-include');
+		document.createElement('ng-pluralize');
+		document.createElement('ng-view');
+		document.createElement('ng:include');
+		document.createElement('ng:pluralize');
+		document.createElement('ng:view');
+		</script>
+		<![endif]-->
+		<!--[if lt IE 9]>
+		<script src="scripts/vendor/html5shiv.js"></script>
+		<script src="scripts/vendor/respond.min.js"></script>
+		<![endif]-->
+		<!-- SCROLLS -->
+		<link rel="stylesheet" href="styles/vendor/bootstrap.min.css" />
+		<link rel="stylesheet" href="styles/base.css" />
+
+	</head>
+
+	<!-- define angular controller -->
+	<body>
+
+		<nav class="navbar-vodofone">
+			<div class="container">
+				<div class="navbar-header">
+					<span class="header-logo"></span>
+					<a class="navbar-brand" href="/">Vodafone</a>
+				</div>
+
+				
+			</div>
+		</nav>
+
+		<div class="container-fluid">
+			<div class="row-fluid">
+				<h3 class="text-center">Top up your mobile phone or mobile broadband device</h3>
+				<br/>
+
+				<!-- angular templating -->
+				<!-- this is where content will be injected -->
+				<div ng-view></div>
+				<div class="view-loader" ng-show="loadingView">
+					<span class ="loader-icon"></span>
+				</div>
+			</div>
+		</div>
+
+		<!-- include scripts here-->
+		<script src="scripts/vendor/angular.min.js"></script>
+		<script src="scripts/vendor/angular-route.min.js"></script>
+
+		<script src="scripts/app.js"></script>
+		<script src="scripts/routes.js"></script>
+		<script src="modules/recharge/controllers.js"></script>
+		<script src="modules/recharge/services.js"></script>
+		<script src="modules/sharedUtils/directives.js"></script>
+
+	</body>
+
+</html>
